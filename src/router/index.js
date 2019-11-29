@@ -131,6 +131,18 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path: '/adder',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'adder',
+        component: () => import('@/views/Adder'),
+        meta: { title: '加法器', icon: 'form' }
+      }
+    ]
+  },
   // {
   //   path: '/nested',
   //   component: Layout,
