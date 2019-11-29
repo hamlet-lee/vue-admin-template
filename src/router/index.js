@@ -51,7 +51,11 @@ export const constantRoutes = [
       path: 'home',
       name: 'Home',
       component: () => import('@/views/Home'),
-      meta: { title: '首页', icon: 'dashboard' }
+      // icon 可以参考 https://panjiachen.github.io/vue-element-admin-site/zh/guide/advanced/icon.html
+      // 可以从 vue-element-admin 项目拷贝过来
+      // 预览：https://panjiachen.github.io/vue-element-admin/#/icon/index
+      // github：https://github.com/PanJiaChen/vue-element-admin/tree/master/src/icons/svg
+      meta: { title: '首页', icon: 'peoples' }
     }]
   },
 
