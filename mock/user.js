@@ -26,12 +26,13 @@ const users = {
 export default [
   // user login
   {
-    url: '/user/login',
+    url: '/api/user/login',
     type: 'post',
     response: config => {
       const { username } = config.body
       const token = tokens[username]
 
+      console.log('login invoked')
       // mock error
       if (!token) {
         return {
@@ -49,7 +50,7 @@ export default [
 
   // get user info
   {
-    url: '/user/info\.*',
+    url: '/api/user/info\.*',
     type: 'get',
     response: config => {
       const { token } = config.query
@@ -72,7 +73,7 @@ export default [
 
   // user logout
   {
-    url: '/user/logout',
+    url: '/api/user/logout',
     type: 'post',
     response: _ => {
       return {
